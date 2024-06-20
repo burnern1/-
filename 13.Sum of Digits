@@ -1,0 +1,14 @@
+public class Solution {
+    public int solution(int N) {
+        int sum = 0;
+        
+        // N을 문자열로 변환하여 각 자릿수를 처리
+        String str = Integer.toString(N);
+        for (int i = 0; i < str.length(); i++) {
+            // 각 자릿수 문자를 숫자로 변환하여 합계에 추가
+            sum += Character.getNumericValue(str.charAt(i));
+        }
+        
+        return sum;
+    }
+}
