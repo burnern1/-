@@ -1,0 +1,13 @@
+public class Solution {
+
+    public long solution(long n) {
+        long sqrt = (long) Math.sqrt(n);
+        
+        // n이 양의 정수 x의 제곱인지 확인
+        if (sqrt * sqrt == n) {
+            return (sqrt + 1) * (sqrt + 1);
+        } else {
+            return -1;
+        }
+    }
+}
