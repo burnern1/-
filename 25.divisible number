@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Solution {
+    public int[] solution(int[] arr, int divisor) {
+        List<Integer> divisibleNumbers = new ArrayList<>();
+        
+        // 배열을 순회하며 divisor로 나누어 떨어지는 값을 찾기
+        for (int num : arr) {
+            if (num % divisor == 0) {
+                divisibleNumbers.add(num);
+            }
+        }
+        
+        // 나누어 떨어지는 값이 하나도 없을 경우
+        if (divisibleNumbers.isEmpty()) {
+            return new int[] {-1};
+        }
+        
+        // 오름차순 정렬
+        Collections.sort(divisibleNumbers);
+        
+        // 결과를 배열로 변환
+        int[] result = new int[divisibleNumbers.size()];
+        for (int i = 0; i < divisibleNumbers.size(); i++) {
+            result[i] = divisibleNumbers.get(i);
+        }
+        
+        return result;
+    }
+}
