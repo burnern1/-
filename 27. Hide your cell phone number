@@ -1,0 +1,13 @@
+public class Solution {
+    public static String solution(String phone_number) {
+        int length = phone_number.length();
+        // 뒷 4자리를 제외한 앞의 길이를 계산
+        int starsLength = length - 4;
+        // 뒷 4자리를 추출
+        String lastFourDigits = phone_number.substring(starsLength);
+        // 앞 부분을 *로 채움
+        String stars = "*".repeat(starsLength);
+        // 합쳐서 반환
+        return stars + lastFourDigits;
+    }
+}
